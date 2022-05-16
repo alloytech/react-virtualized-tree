@@ -33,6 +33,7 @@ export interface Extensions {
 
 export interface TreeProps {
   extensions?: Extensions;
+  fixedHeight?: number;
   nodes: Node[];
   onChange: (nodes: Node[]) => void;
   children: <T = any>(props: RendererProps<T>) => JSX.Element;
