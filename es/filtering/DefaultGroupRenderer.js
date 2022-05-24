@@ -1,0 +1,25 @@
+import React from 'react';
+
+var DefaultGroupRenderer = function DefaultGroupRenderer(_ref) {
+  var _onChange = _ref.onChange,
+    groups = _ref.groups,
+    selectedGroup = _ref.selectedGroup;
+
+  return React.createElement(
+    'select',
+    {
+      className: 'tree-group',
+      onChange: function onChange(_ref2) {
+        var value = _ref2.target.value;
+
+        _onChange(value);
+      },
+      value: selectedGroup,
+    },
+    Object.keys(groups).map(function(g) {
+      return React.createElement('option', {key: g, value: g}, groups[g].name);
+    }),
+  );
+};
+
+export default DefaultGroupRenderer;
