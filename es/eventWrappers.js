@@ -1,8 +1,8 @@
 var _wrapKeyDownEvent;
 
 export var wrapKeyDownEvent = function wrapKeyDownEvent(availablekeys) {
-  return function(handler) {
-    return function(_ref) {
+  return function (handler) {
+    return function (_ref) {
       for (var _len = arguments.length, params = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
         params[_key - 1] = arguments[_key];
       }
@@ -113,9 +113,7 @@ export var KEY_CODES = {
   OpenBracket: 219,
   BackSlash: 220,
   CloseBracket: 221,
-  SingleQuote: 222,
+  SingleQuote: 222
 };
 
-export var submitEvent = wrapKeyDownEvent(
-  ((_wrapKeyDownEvent = {}), (_wrapKeyDownEvent[KEY_CODES.Enter] = null), _wrapKeyDownEvent),
-);
+export var submitEvent = wrapKeyDownEvent((_wrapKeyDownEvent = {}, _wrapKeyDownEvent[KEY_CODES.Enter] = null, _wrapKeyDownEvent));
