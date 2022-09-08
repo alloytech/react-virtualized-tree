@@ -1,16 +1,4 @@
-var _extends =
-  Object.assign ||
-  function(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 export var isNodeExpanded = function isNodeExpanded(node) {
   return node.state && node.state.expanded;
@@ -21,9 +9,9 @@ export var nodeHasChildren = function nodeHasChildren(node) {
 
 export var getFlattenedTree = function getFlattenedTree(nodes) {
   var parents = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-  return nodes.reduce(function(flattenedTree, node) {
+  return nodes.reduce(function (flattenedTree, node) {
     var deepness = parents.length;
-    var nodeWithHelpers = _extends({}, node, {deepness: deepness, parents: parents});
+    var nodeWithHelpers = _extends({}, node, { deepness: deepness, parents: parents });
 
     if (!nodeHasChildren(node) || !isNodeExpanded(node)) {
       return [].concat(flattenedTree, [nodeWithHelpers]);
@@ -38,14 +26,7 @@ export var getFlattenedTreePaths = function getFlattenedTreePaths(nodes) {
 
   var paths = [];
 
-  for (
-    var _iterator = nodes,
-      _isArray = Array.isArray(_iterator),
-      _i = 0,
-      _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();
-    ;
-
-  ) {
+  for (var _iterator = nodes, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {
     var _ref;
 
     if (_isArray) {
@@ -59,6 +40,7 @@ export var getFlattenedTreePaths = function getFlattenedTreePaths(nodes) {
 
     var node = _ref;
     var id = node.id;
+
 
     if (!nodeHasChildren(node) || !isNodeExpanded(node)) {
       paths.push(parents.concat(id));
