@@ -60,20 +60,6 @@ export default class TreeContainer extends React.Component {
   }
 }
 
-TreeContainer.propTypes = {
-  extensions: PropTypes.shape({
-    updateTypeHandlers: PropTypes.object,
-  }),
-  fixedHeight: PropTypes.number,
-  nodes: PropTypes.arrayOf(PropTypes.shape(Node)).isRequired,
-  onChange: PropTypes.func,
-  children: PropTypes.func.isRequired,
-  nodeMarginLeft: PropTypes.number,
-  width: PropTypes.number,
-  scrollToId: PropTypes.number,
-  scrollToAlignment: PropTypes.string,
-};
-
 TreeContainer.defaultProps = {
   nodeMarginLeft: 30,
 };

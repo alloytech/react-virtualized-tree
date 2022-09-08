@@ -85,13 +85,3 @@ export default class FilteringContainer extends React.Component {
     );
   }
 }
-
-FilteringContainer.propTypes = {
-  children: PropTypes.func.isRequired,
-  debouncer: PropTypes.func,
-  groups: PropTypes.object,
-  selectedGroup: PropTypes.string,
-  groupRenderer: PropTypes.func,
-  onSelectedGroupChange: PropTypes.func,
-  indexSearch: PropTypes.func,
-};
