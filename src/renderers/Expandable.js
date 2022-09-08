@@ -1,10 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 import {submitEvent} from '../eventWrappers';
 import {getNodeRenderOptions, updateNode} from '../selectors/nodes';
-import {Renderer} from '../shapes/rendererShapes';
 
 const Expandable = ({
   onChange,
@@ -34,15 +32,6 @@ const Expandable = ({
       {children}
     </span>
   );
-};
-
-Expandable.propTypes = {
-  ...Renderer,
-  iconsClassNameMap: PropTypes.shape({
-    expanded: PropTypes.string,
-    collapsed: PropTypes.string,
-    lastChild: PropTypes.string,
-  }),
 };
 
 export default Expandable;

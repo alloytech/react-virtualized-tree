@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {AutoSizer, List, CellMeasurerCache, CellMeasurer} from 'react-virtualized';
 
-import {FlattenedNode} from './shapes/nodeShapes';
 import TreeState, {State} from './state/TreeState';
 
 export default class Tree extends React.Component {
@@ -90,14 +88,3 @@ export default class Tree extends React.Component {
     );
   }
 }
-
-Tree.propTypes = {
-  fixedHeight: PropTypes.number,
-  nodes: PropTypes.arrayOf(PropTypes.shape(FlattenedNode)).isRequired,
-  NodeRenderer: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-  nodeMarginLeft: PropTypes.number,
-  width: PropTypes.number,
-  scrollToIndex: PropTypes.number,
-  scrollToAlignment: PropTypes.string,
-};

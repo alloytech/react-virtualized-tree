@@ -39,22 +39,6 @@ export default class UnstableFastTree extends React.Component {
   }
 }
 
-UnstableFastTree.propTypes = {
-  extensions: PropTypes.shape({
-    updateTypeHandlers: PropTypes.object,
-  }),
-  nodes: PropTypes.shape({
-    flattenedTree: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.oneOf([PropTypes.number, PropTypes.string])))
-      .isRequired,
-    tree: PropTypes.arrayOf(PropTypes.shape(Node)).isRequired,
-  }),
-  onChange: PropTypes.func,
-  children: PropTypes.func.isRequired,
-  nodeMarginLeft: PropTypes.number,
-  width: PropTypes.number,
-  scrollToId: PropTypes.number,
-};
-
 UnstableFastTree.defaultProps = {
   nodeMarginLeft: 30,
 };
